@@ -3,4 +3,5 @@
 #### Quality Control ####
 
 descript_gag <- read.csv2("data/VSV_gag_desc.csv")
-View(descript_gag)
+count_gag <- read.csv2("data/VSV_gag_COUNTS.csv")
+View(count_gag)
