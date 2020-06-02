@@ -1,0 +1,7 @@
+# VSV_gag
+
+#### Quality Control ####
+
+descript_gag <- read.csv2("data/VSV_gag_desc.csv")
+count_gag <- read.csv2("data/VSV_gag_COUNTS.csv")
+View(count_gag)
