@@ -1,4 +1,10 @@
-  # VSV_gag
+# VSV_gag
+
+rm(list = ls())
+options(stringsAsFactors = F)
+setwd("Ebola/")
+
+sapply(c('ggplot2','ggrepel','dplyr','Glimma', "tidyr", "edgeR", "tmod"), require,character.only=T)
 
 #### Quality Control ####
 
