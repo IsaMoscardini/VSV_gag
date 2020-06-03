@@ -6,6 +6,7 @@ setwd("Ebola/")
 
 sapply(c('ggplot2','ggrepel','dplyr','Glimma', "tidyr", "edgeR", "tmod"), require,character.only=T)
 
+
 #### Quality Control ####
 
 descript_gag <- read.csv2("data/VSV_gag_desc.csv")
