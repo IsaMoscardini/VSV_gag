@@ -1,0 +1,16 @@
+A is a table with ID in the columns and gene in the rows and B is a table with ID in the columns and B cell parameters in the rows (4 rows in total)
+
+identical(colnames(A), colnames(B)) # TRUE
+
+ corr_Bcell<- c() # pour ecrire le résultat
+ for(i in 1:4){ # pour chaque variable uniquement la premiére ligne #### on pouvait faire directement toute les lignes avec i in 1:X (x nbr de ligne)
+   print(rownames(B)[i]) #afficher chaque gène du variable B pour suivre l'analyse
+   for(j in 1:nrow(A)){# pour chaque variable de B
+     x   <- B[i,] #récupération de la ligne I de B
+     y   <- A[j,] #récupération de la ligne J de A
+     cor <- cor.test(as.numeric(x),as.numeric(y),method="pearson") # la corrélation de pearson et calcule le niveau de significativité de la corrélation (p_val)
+     
+     corr_Bcell  <- rbind(corr_Bcell ,cbind(rownames(A)[j],rownames(B)[i],cor$estimate,cor$p.value)) # écrire le résultat dans cor_cDC2
+   }
+   
+ }
